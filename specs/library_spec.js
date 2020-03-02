@@ -1,6 +1,9 @@
 const assert = require('assert');
-const Library = require('../library');
-const Book = require('../book');
+// const Library = require('../library');
+import {Library} from '../library';
+import {Book} from '../book';
+
+// const Book = require('../book');
 
 describe('Library', function () {
   let library;
@@ -41,3 +44,5 @@ describe('Library', function () {
     assert.strictEqual(library.bookCount(), 3);
   });
 });
+
+

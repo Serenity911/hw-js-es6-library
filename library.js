@@ -1,7 +1,8 @@
-let Library = class{
+export class Library {
   constructor(books = []){
     this.books = books;
   }
+
 
   bookCount() {
     return this.books.length;
@@ -17,11 +18,12 @@ let Library = class{
 
   printInventory() {
     this.books.forEach((book) => {
-      console.log(`${book.title} by ${book.author}`);
+      [title, author] = book;
+      console.log(`${title} by ${author}`);
+
+      // console.log(`${book.title} by ${book.author}`);
     });
   }
-
-
 }
 
 
@@ -48,4 +50,4 @@ let Library = class{
 //   });
 // };
 
-module.exports = Library;
+// module.exports = Library;
